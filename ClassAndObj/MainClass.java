@@ -34,6 +34,12 @@ public class MainClass {
      c.model = "Fortuner";
      c.price = 4500000;
      c.showCar();
+
+	 Car c2 = new Car();
+     c2.brand = "Land Rover";
+     c2.model = "Defender";
+     c2.price = 9999999;
+     c2.showCar();
      
      System.out.println("-----------------------------------");
 
