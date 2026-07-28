@@ -1,36 +1,30 @@
-package com.TKA;
+package com.PracticeQuestion;
+
+import java.util.Scanner;
 
 public class Student {
+	Scanner sc = new Scanner(System.in);
 
-    int rollNo = 1;
-    String name = "Atharv";
-    int age = 21;
-    String gender = "Male";
-    String course = "BBA CA";
-    String address = "Pune";
-    String mobile = "9876543210";
-    String email = "atharv@gmail.com";
-    double fees = 45000;
-    String division = "A";
+	void data() {
+		System.out.println("Enter name");
+		String name = sc.nextLine();
+		System.out.println("Enter Marks of 3 Subj");
+		int n1, n2, n3 = sc.nextInt();
+		n1 = sc.nextInt();
+		n2 = sc.nextInt();
+		float avg = n1 + n2 + n3 / 300;
+		System.out.println("Name " + name + " " + "Average " + avg);
+		if (avg > 75) {
+			System.out.println("Grade A");
+		} else if (avg > 60 && avg < 75) {
+			System.out.println("Grade B");
 
-    void study() {
-        System.out.println("Student is Studying.");
-    }
+		} else if (avg > 40 && avg < 60) {
+			System.out.println("Grade C");
 
-    void attendClass() {
-        System.out.println("Student is Attending Class.");
-    }
+		} else {
+			System.out.println("Fail");
+		}
+	}
 
-    void displayDetails() {
-        System.out.println("Roll No : " + rollNo);
-        System.out.println("Name : " + name);
-        System.out.println("Age : " + age);
-        System.out.println("Gender : " + gender);
-        System.out.println("Course : " + course);
-        System.out.println("Address : " + address);
-        System.out.println("Mobile : " + mobile);
-        System.out.println("Email : " + email);
-        System.out.println("Fees : " + fees);
-        System.out.println("Division : " + division);
-    }
 }

@@ -1,102 +1,41 @@
-package ClassAndObj;
+package com.PracticeQuestion;
 
 public class MainClass {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-     Student s1=new Student();
-     
-     s1.name="Atharv";
-     s1.rollNo=48;
-     s1.marks=85.8f;
-     s1.display();
-     
-     Student s2=new Student();
-     
-     s2.name="Ram";
-     s2.rollNo=49;
-     s2.marks=84.8f;
-     
-     s2.display();
-     
-     
-     System.out.println("-----------------------------------");
-     
-     Employee e = new Employee();
-     e.name = "Rahul";
-     e.salary = 50000;
-     e.showDetails();
-     
-     System.out.println("-----------------------------------");
-     
-     Car c = new Car();
-     c.brand = "Toyota";
-     c.model = "Fortuner";
-     c.price = 4500000;
-     c.showCar();
-     
-     
-     Car c2 = new Car();
-     c2.brand = "Land Rover";
-     c2.model = "Defender";
-     c2.price = 9999999;
-     c2.showCar();
-     
-     System.out.println("-----------------------------------");
+    public static void main(String[] args) {
 
-     Mobile m = new Mobile();
-     m.brand = "Samsung";
-     m.ram = 8;
-     m.price = 25000;
-     m.displaySpec();
+    	Q1 q = new Q1();
+		ArmStrong a = new ArmStrong();
+		System.out.println(q.calculateElectricityBill(1115));
+		System.out.println("----------------------------------------------------");
+		System.out.println(a.isArmstrong(153));
+		System.out.println("----------------------------------------------------");
+		Student s = new Student();
+		s.data();
+		System.out.println("----------------------------------------------------");
+	
 
-     System.out.println("-----------------------------------");
-     
-     
-     Rectangle r = new Rectangle();
-     r.length = 10;
-     r.width = 5;
-     r.calculateArea();
-     
-     System.out.println("-----------------------------------");
+       
 
-     Circle c1 = new Circle();
-     c1.radius = 7;
-     c1.area();
-     
-     System.out.println("-----------------------------------");
+        // Q11 Area (Method Overloading)
+        Area area = new Area();
+        area.area(5.0);
+        area.area(10, 20);
+        area.area(10, 8, 1);
 
-     BankAccount b = new BankAccount();
-     b.accountNumber = 1234567890L;
-     b.balance = 50000;
-     b.displayBalance();
+        // Q12 Addition (Method Overloading)
+        Addition add = new Addition();
+        add.add(10, 20);
+        add.add(10, 20, 30);
+        add.add(10.5, 20.5);
 
-     System.out.println("-----------------------------------");
-     
-     Book bk = new Book();
-     bk.title = "Java Programming";
-     bk.author = "James";
-     bk.price = 550;
-     bk.showBook();
-     
-     System.out.println("-----------------------------------");
-     
-     
+        // Q13 Inheritance
+        Car car = new Car();
+        car.start();
+        car.showSpeed();
 
-     Laptop l = new Laptop();
-     l.brand = "Dell";
-     l.processor = "Intel i5";
-     l.price = 65000;
-     l.showDetails();
-     
-     System.out.println("-----------------------------------");
-
-     ATM atm = new ATM();
-     atm.balance = 12000;
-     atm.checkBalance();
-
-     
-     
-	}
-
-}
+        // Q14 Employee & Manager
+        Manager manager = new Manager();
+        manager.totalSalary();
+    }
+    }
