@@ -24,7 +24,7 @@ public class DepartmentController {
 		this.departmentRepository = departmentRepository;
 	}
 
-	// Create a department with multiple employees
+	
 	@PostMapping
 	public Department createDepartment(@RequestBody Department department) {
 
@@ -35,13 +35,11 @@ public class DepartmentController {
 		return departmentRepository.save(department);
 	}
 
-	// Get all departments with their employees
 	@GetMapping
 	public List<Department> getAllDepartments() {
 		return departmentRepository.findAll();
 	}
 
-	// Get a department by ID
 	@GetMapping("/{id}")
 	public ResponseEntity<Department> getDepartmentById(@PathVariable Long id) {
 
